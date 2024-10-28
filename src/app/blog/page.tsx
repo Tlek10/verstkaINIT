@@ -1,12 +1,13 @@
-import logo from '/src/img/logo.svg';
 import React from 'react';
+import logo from '../img/logo.svg';
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 export default function Blog() {
     return (
-        <div>
-            <nav>
-                <img className="w-3 h-3" src={logo} alt="logo" />
-            </nav>
+        <div className='flex flex-col w-full'>
+            <Navbar/>
+            <h1 className='text-[56px]'>Блог</h1>
         </div>
     );
 }
