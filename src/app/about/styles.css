@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.otf') format('opentype');
+    font-weight: 300; /* Устанавливаем вес шрифта (Light) */
+    font-style: normal; /* Устанавливаем стиль шрифта */
+}
+
+.header {
+    font-family: 'Gilroy', sans-serif; /* Используем шрифт */
+    font-size: 9.81658px; /* Устанавливаем размер шрифта */
+    color: #19243D; /* Устанавливаем цвет текста */
+}
