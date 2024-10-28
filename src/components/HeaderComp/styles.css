@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../app/fonts/Gilroy-Light.otf') format('opentype');
+    font-weight: 300; /* Устанавливаем вес шрифта (Light) */
+    font-style: normal; /* Устанавливаем стиль шрифта */
+}
+
+
+:root {
+    --top-header: 60px; /* Пример высоты заголовка */
+    --border: #ddd; /* Цвет границы */
+    --v-small: 14px; /* Размер шрифта */
+}
+.header {
+    padding: 2px 0 0; /* Устанавливаем отступы: 2px сверху, 0px справа и слева, 0px снизу */
+    height: var(--top-header);
+    border-bottom: 1px solid var(--border);
+    line-height: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gilroy', sans-serif; /* Используем шрифт */
+    font-size: 9.81658px; /* Устанавливаем размер шрифта */
+    color: #19243D; /* Устанавливаем цвет текста */
+}
+
+.text-gray-700 {
+    color: #4a5568; /* Цвет текста для серых ссылок */
+}
+
+.text-red-600 {
+    color: #c53030; /* Цвет текста для красных ссылок */
+}
+
+/* Добавьте любые дополнительные стили по вашему желанию */
