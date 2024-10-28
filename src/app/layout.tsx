@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import React from "react";
@@ -13,7 +11,9 @@ export default function RootLayout({
     <html lang="en">
       <body className=''>
       <Navbar/>
+      <div className='px-20'>
         {children}
+      </div>
       </body>
     </html>
   );

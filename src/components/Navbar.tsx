@@ -1,4 +1,4 @@
-import logo from "@/public/img/logo.svg";
+import logo from "../../public/img/logo.svg";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -18,7 +18,7 @@ const navLinks: NavbarLink[] = [
 
 const Navbar = () => {
     return (
-        <div className='flex justify-center'>
+        <nav className='flex justify-center'>
             <div className='mt-3 max-w-screen-xl w-full flex justify-between items-center'>
                 <div>
                     <Image className="w-[50px] h-[40px]" src={logo} alt="logo"/>
@@ -35,7 +35,7 @@ const Navbar = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }
 

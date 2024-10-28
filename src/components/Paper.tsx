@@ -1,9 +1,12 @@
 import Image from 'next/image'
-import defaultImg from '/src/public/img/img.png'
+import defaultImg from '/public/img/img.png'
 import { faEye, faComments, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false;
 
-type Paper = {
+interface Paper {
     paperId: string,
     paperCategory: string,
     paperName: string,
@@ -44,14 +47,14 @@ const Paper = () => {
     return (
         <div>
             {papers.map((paper) => (
-                <div key={paper.paperId} className='w-[500px] h-[420px] rounded-md shadow-md flex flex-col'>
-                    <div className='p-6 flex flex-col '>
+                <div key={paper.paperId} className='w-[500px] h-[420px] rounded-md shadow-md border-t-[0.5px] flex flex-col mb-6'>
+                    <div className='p-6 flex flex-col'>
                         <div className='flex flex-row pb-3'>
                             <h3 className='text-red-500 text-xs'>#{paper.paperCategory}</h3>
                             <h3 className='text-xs ml-3 text-gray-500'>{paper.paperDate} г.</h3>
                         </div>
                         <h1 className='font-bold text-2xl pb-3'>{paper.paperName}</h1>
-                        <span className='text-sm '>{paper.paperDescription}</span>
+                        <span className='text-sm'>{paper.paperDescription}</span>
                     </div>
                     <div className='relative w-full h-[250px]'>
                         <Image
@@ -62,15 +65,15 @@ const Paper = () => {
                             objectPosition="center"
                         />
                     </div>
-                    <div className="p-2 flex justify-between items-center text-gray-500">
+                    <div className="p-3 flex justify-between items-center text-gray-500 text-xs">
                         <span className="flex items-center">
-                            <FontAwesomeIcon icon={faEye} className="mr-2" />191
+                            <FontAwesomeIcon height={15} width={15} icon={faEye} className="mr-2"/>191
                         </span>
                         <span className="flex items-center">
-                            <FontAwesomeIcon icon={faComments} className="mr-2" />0
+                            <FontAwesomeIcon height={15} width={15} icon={faComments} className="mr-2" />0
                         </span>
                         <span className="flex items-center text-green-500">
-                            <FontAwesomeIcon icon={faArrowUp} className="mr-2" />3
+                            <FontAwesomeIcon height={15} width={15} icon={faArrowUp} className="mr-2" />3
                         </span>
                     </div>
                 </div>
