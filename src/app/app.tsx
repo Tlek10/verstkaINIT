@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AboutPage from "@/app/about/aboutPage";
+import Page from "@/app/about/page";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -7,7 +7,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/about" component={<AboutPage/>} />
+                <Route path="/about" component={<Page/>} />
                 {/* другие маршруты */}
             </Routes>
         </Router>
