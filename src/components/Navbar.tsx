@@ -1,6 +1,7 @@
-import logo from "@/app/img/logo.svg";
+import logo from "@/public/img/logo.svg";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 type NavbarLink = {
     linkId: string;
@@ -17,20 +18,22 @@ const navLinks: NavbarLink[] = [
 
 const Navbar = () => {
     return (
-        <div className='w-full flex m-5 flex-row justify-between'>
-            <div>
-                <img className="w-3 h-3" src={logo} alt="logo"/>
-            </div>
-            <div className='w-1/2 flex space-x-3 text-sm items-center '>
-                {navLinks.map((link) => (
-                    <Link className='hover:text-red-600' href={link.linkUrl} key={link.linkId}>
-                        <span className="mr-4 hover:text-red">{link.linkName}</span>
-                    </Link>
-                ))}
-                <button
-                    className='transition-all hover:text-white hover:bg-red-600 text-xs w-[170px] h-[35px] border-[1px]'>ЛИЧНЫЙ
-                    КАБИНЕТ
-                </button>
+        <div className='flex justify-center'>
+            <div className='mt-3 max-w-screen-xl w-full flex justify-between items-center'>
+                <div>
+                    <Image className="w-[50px] h-[40px]" src={logo} alt="logo"/>
+                </div>
+                <div className='w-1/2 flex space-x-3 text-sm items-center '>
+                    {navLinks.map((link) => (
+                        <Link className='hover:text-red-500' href={link.linkUrl} key={link.linkId}>
+                            <span className="mr-4">{link.linkName}</span>
+                        </Link>
+                    ))}
+                    <button
+                        className='transition-all hover:text-white hover:bg-red-500 text-xs w-[170px] h-[35px] shadow-sm border-[1px]'>ЛИЧНЫЙ
+                        КАБИНЕТ
+                    </button>
+                </div>
             </div>
         </div>
     )
