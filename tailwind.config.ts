@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'hero-texture': "url('/assets/img/about/texture.webp')",
+      },
     },
   },
   plugins: [],
